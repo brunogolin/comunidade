@@ -1,18 +1,22 @@
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-<div class="w3-container">
+<div>
   <h2>Meus Dados</h2>
 </div>
 
-<form [formGroup]="form">
-  <div class="w3-row-padding">
-    <div class="w3-half">
-      <label>Nome</label>
-      <input class="w3-input w3-border" type="text" formControlName="NOME" />
-    </div>
-    <div class="w3-half">
-      <label>E-mail</label>
-      <input class="w3-input w3-border" type="text" formControlName="EMAIL" />
-    </div>
+<div class="row mt-5">
+  <div class="col-4">
+    <form [formGroup]="form">
+      <div class="form-group">
+        <label>Nome</label>
+        <input class="form-control" type="text" formControlName="NOME" />
+      </div>
+      <div class="form-group">
+        <label>E-mail</label>
+        <input class="form-control" type="text" formControlName="EMAIL" />
+      </div>
+      <br />
+      <button type="submit" class="btn btn-primary">Salvar</button>
+      <button type="submit" class="btn btn-default ml-2">Cancelar</button>
+    </form>
   </div>
-</form>
+</div>

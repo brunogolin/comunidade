@@ -19,11 +19,32 @@ import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MeusDadosService } from './comunidade/meus-dados/meus-dados.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './conta/login/login.component';
+import { CriarContaComponent } from './conta/criar-conta/criar-conta.component';
+import { HomeComponent } from './layout/home/home.component';
+import { AutenticacaoComponent } from './layout/autenticacao/autenticacao.component';
+import { AutenticacaoGuard } from './conta/autenticacao.guard';
 
 const appRoutes: Routes = [
-  { path: 'comunidade/meus-dados', component: MeusDadosComponent },
-  { path: 'comunidade/meus-nicks', component: MeusNicksComponent },
-  { path: 'comunidade/desafios', component: DesafiosComponent }
+  {
+    path: '',
+    component: HomeComponent,
+    children: [
+      { path: 'comunidade/meus-dados', component: MeusDadosComponent },
+      { path: 'comunidade/meus-nicks', component: MeusNicksComponent },
+      { path: 'comunidade/desafios', component: DesafiosComponent },
+    ],
+    canActivate: [AutenticacaoGuard]
+  },
+  {
+    path: '',
+    component: AutenticacaoComponent,
+    children: [
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
+      { path: 'login', component: LoginComponent },
+      { path: 'criar-conta', component: CriarContaComponent }
+    ]
+  }
 ];
 
 @NgModule({
@@ -32,7 +53,11 @@ const appRoutes: Routes = [
     NavComponent,
     MeusDadosComponent,
     MeusNicksComponent,
-    DesafiosComponent
+    DesafiosComponent,
+    LoginComponent,
+    CriarContaComponent,
+    HomeComponent,
+    AutenticacaoComponent
   ],
   imports: [
     BrowserModule,

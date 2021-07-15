@@ -1,0 +1,17 @@
+<h2 class="text-center">Criar minha conta</h2>
+
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+  <div class="mb-3">
+    <label class="form-label">Nome</label>
+    <input class="form-control" type="text" name="nome" id="nome" formControlName="NOME" required />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">E-mail</label>
+    <input class="form-control" type="email" name="email" id="email" formControlName="EMAIL" required />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Senha</label>
+    <input class="form-control" type="password" name="password" id="password" formControlName="SENHA" required />
+  </div>
+  <button type="submit" class="btn btn-primary btn-block">Criar minha conta</button>
+</form>
