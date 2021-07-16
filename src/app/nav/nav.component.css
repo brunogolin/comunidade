@@ -1,5 +1,6 @@
 .sidenav-container {
   height: 100%;
+  width: 100%;
 }
 
 .sidenav {
@@ -7,7 +8,7 @@
 }
 
 .sidenav .mat-toolbar {
-  background: inherit;
+  background: #00087e;
 }
 
 .mat-toolbar.mat-primary {
