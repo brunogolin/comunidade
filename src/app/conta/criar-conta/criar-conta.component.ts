@@ -27,9 +27,9 @@ export class CriarContaComponent implements OnInit {
 
   onSubmit() {
 
-    this.account.name = this.form.controls['NOME'].value
-    this.account.email = this.form.controls['EMAIL'].value
-    this.account.password = this.form.controls['SENHA'].value
+      this.account.name = this.form.controls['NOME'].value
+      this.account.email = this.form.controls['EMAIL'].value
+      this.account.password = this.form.controls['SENHA'].value
 
 
   }

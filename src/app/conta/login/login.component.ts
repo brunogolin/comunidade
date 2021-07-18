@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ContaService } from '../conta.service';
 
@@ -11,8 +11,8 @@ import { ContaService } from '../conta.service';
 export class LoginComponent implements OnInit {
 
   form = new FormGroup({
-    EMAIL: new FormControl(''),
-    SENHA: new FormControl('')
+    EMAIL: new FormControl('', Validators.required),
+    SENHA: new FormControl('', Validators.required)
   })
 
   login = {
