@@ -11,8 +11,8 @@ import { ContaService } from '../conta.service';
 export class LoginComponent implements OnInit {
 
   form = new FormGroup({
-    EMAIL: new FormControl('', Validators.required),
-    SENHA: new FormControl('', Validators.required)
+    EMAIL: new FormControl(''),
+    SENHA: new FormControl('')
   })
 
   login = {

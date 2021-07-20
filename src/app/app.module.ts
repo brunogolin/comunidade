@@ -63,6 +63,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { SmsConfigEditarComponent } from './pages/sms-config/sms-config-editar/sms-config-editar.component';
 
 const appRoutes: Routes = [
   {
@@ -101,7 +102,8 @@ const appRoutes: Routes = [
     HomeComponent,
     AutenticacaoComponent,
     SmsEnvioComponent,
-    SmsConfigComponent
+    SmsConfigComponent,
+    SmsConfigEditarComponent
   ],
   imports: [
     BrowserModule,

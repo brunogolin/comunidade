@@ -1,14 +1,22 @@
 <h2 class="text-center">Entrar</h2>
 
-<form (ngSubmit)="onSubmit()" [formGroup]="form">
-  <div class="mb-3">
-    <label class="form-label">E-mail</label>
-    <input class="form-control" type="email" name="email" id="email" formControlName="EMAIL" required />
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Senha</label>
-    <input class="form-control" type="password" name="password" id="password" formControlName="SENHA" required />
-  </div>
-  <button type="submit" class="btn btn-primary btn-block">Entrar</button>
-  <button type="button" class="btn btn-link btn-block" [routerLink]="['/criar-conta']">Criar conta</button>
-</form>
+<div class="col-12 corpo">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="mb-12 row">
+      <label class="col-sm-2 col-form-label">E-mail</label>
+      <input class="form-control" type="email" name="email" id="email" formControlName="EMAIL" required />
+    </div>
+    
+    <div class="mb-12 row">
+      <label class="col-sm-2 col-form-label">Senha</label>
+      <input class="form-control" type="password" name="password" id="password" formControlName="SENHA" required />
+    </div>
+
+    <div class="botao-login">
+      <button type="submit" class="btn btn-link ml-2" [routerLink]="['/criar-conta']">Criar Conta</button>
+      <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+    </div>
+
+  </form>
+</div>

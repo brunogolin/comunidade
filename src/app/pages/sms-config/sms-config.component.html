@@ -1,18 +1,28 @@
 
 <div class="titulo">
-    <h3>Configuração dos E-mails</h3>
-  </div>
-  
-  <div class="col-6 corpo">
-    <form [formGroup]="form">
-  
-      <div class="mb-3 row">
-        <label class="col-sm-2 col-form-label">Token</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" formControlName="TOKEN" />
-        </div>
-      </div>
+  <h3>Configuração dos E-mails</h3>
+</div>
 
-    </form>
-  </div>
+<div class="col-6 corpo">
+  <form [formGroup]="form">
+    <div class="mb-3 row">
+      <label class="col-sm-2 col-form-label">Parceiro</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="PARCEIRO"/>
+      </div>
+    </div>
+
+    <div class="mb-3 row">
+      <label class="col-sm-2 col-form-label">Token</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="TOKEN" />
+      </div>
+    </div>
+
+    <div class="botao">
+      <button type="submit" class="btn btn-primary" (click)="executeAlterar()">Alterar</button>
+    </div>
+  </form>
+  
+</div>
   

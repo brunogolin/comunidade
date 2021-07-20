@@ -1,0 +1,27 @@
+<div class="titulo">
+    <h3 mat-dialog-title>[Editar] Configuração dos E-mails</h3>
+</div>
+  
+<div class="col-12">
+  <form [formGroup]="form">
+    <div class="mb-12 row linha-modal">
+      <label class="col-sm-2 col-form-label modal-label">Parceiro</label>
+      <div class="col-sm-9">
+          <input type="text" class="form-control" formControlName="PARCEIRO" />
+      </div>
+    </div>
+
+    <div class="mb-12 row linha-modal">
+      <label class="col-sm-2 col-form-label modal-label">Token</label>
+      <div class="col-sm-9">
+          <input type="text" class="form-control" formControlName="TOKEN" />
+      </div>
+    </div>
+    
+    <div class="botao-login">
+    <button type="submit" class="btn btn-primary" (click)="executeSalvar()">Salvar</button>
+    </div>
+  </form>
+
+</div>
+    
